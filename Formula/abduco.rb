@@ -2,7 +2,6 @@ class Abduco < Formula
   desc "Provides session management: i.e. separate programs from terminals"
   homepage "https://www.brain-dump.org/projects/abduco/"
   url "https://github.com/novadev94/abduco/archive/refs/tags/v0.6.1-rc.tar.gz"
-  version "0.6.1-rc"
   sha256 "bf868495495bac44834e9e3fd1359b30b4b5a3c779bef2162e0bc8c1d7f70688"
   license "ISC"
   head "https://github.com/novadev94/abduco.git", branch: "master"
