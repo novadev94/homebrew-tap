@@ -1,5 +1,5 @@
 class Shdotenv < Formula
-  desc "dotenv for shells with support for POSIX-compliant and multiple .env file syntax"
+  desc "Dotenv for shells with support for POSIX-compliant and multiple .env file syntax"
   homepage "https://github.com/ko1nksm/shdotenv"
   url "https://github.com/ko1nksm/shdotenv/releases/download/v0.14.0/shdotenv"
   version "0.14.0"

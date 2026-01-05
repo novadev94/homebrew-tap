@@ -1,14 +1,6 @@
 class CardanoUp < Formula
-  desc "Command line utility for managing Cardano services"
+  desc "Command-line utility for managing Cardano services"
   homepage "https://github.com/blinklabs-io/cardano-up"
-  version "0.14.2"
-  license "Apache-2.0"
-
-  livecheck do
-    url :stable
-    strategy :github_latest
-  end
-
   # Normalize OS/arch to match upstream filenames
   OSN = if OS.mac?
     "darwin"
@@ -16,13 +8,15 @@ class CardanoUp < Formula
     "linux"
   else
     raise "Unsupported OS for cardano-up"
-  end
+  end.freeze
+
+  VERSION = "0.14.2".freeze
 
   ARCH = if Hardware::CPU.arm?
     "arm64"
   else
     "amd64"
-  end
+  end.freeze
 
   # Per-platform checksums
   SHA_TABLE = {
@@ -30,10 +24,17 @@ class CardanoUp < Formula
     ["darwin", "amd64"] => "9ceec837f312846502985713a15ab98141b51eaa0eb6e14a51fc7fc48ef15f3a",
     ["linux",  "arm64"] => "8e53954e35eb1d22f75ae28d695f5becb50d00abacc888b2698979d240752aca",
     ["linux",  "amd64"] => "32d41bfb7c3c0ef9f0963ef8aeccbf5ba91e2c86f6d8a2c56ec3e31901df658a",
-  }
+  }.freeze
 
-  url "https://github.com/blinklabs-io/cardano-up/releases/download/v#{version}/cardano-up-v#{version}-#{OSN}-#{ARCH}"
+  url "https://github.com/blinklabs-io/cardano-up/releases/download/v#{VERSION}/cardano-up-v#{VERSION}-#{OSN}-#{ARCH}"
+  version VERSION
   sha256 SHA_TABLE.fetch([OSN, ARCH])
+  license "Apache-2.0"
+
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
 
   def install
     bin.install "cardano-up-v#{version}-#{OSN}-#{ARCH}" => "cardano-up"
