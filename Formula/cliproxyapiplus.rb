@@ -28,6 +28,8 @@ class Cliproxyapiplus < Formula
 
   service do
     run [opt_bin/"cliproxyapiplus"]
+    log_path var/"log/cliproxyapi.log"
+    error_log_path var/"log/cliproxyapi.log"
     keep_alive true
   end
 
