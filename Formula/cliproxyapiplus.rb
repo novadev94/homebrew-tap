@@ -1,8 +1,8 @@
 class Cliproxyapiplus < Formula
   desc "Plus version of CLIProxyAPI"
   homepage "https://github.com/router-for-me/CLIProxyAPIPlus"
-  url "https://github.com/router-for-me/CLIProxyAPIPlus/archive/refs/tags/v6.7.53-0.tar.gz"
-  sha256 "7c69833165dc49a8b5f2873078f0cf129d499fdb2bda7f596eb21cc1e9faa134"
+  url "https://github.com/router-for-me/CLIProxyAPIPlus/archive/refs/tags/v6.8.1-1.tar.gz"
+  sha256 "e91906872952d40a6e0476a52ff188914c14290da2671fd851c574b2549ba66c"
   license "MIT"
 
   livecheck do
