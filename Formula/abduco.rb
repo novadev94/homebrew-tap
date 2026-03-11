@@ -12,8 +12,6 @@ class Abduco < Formula
     regex(/^v?(\d+(?:\.\d+)*(?:-[a-zA-Z0-9]+)?)$/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   def install
     ENV.append_to_cflags "-D_DARWIN_C_SOURCE"
     system "make", "PREFIX=#{prefix}", "MANPREFIX=#{man}", "install"
