@@ -1,4 +1,4 @@
-# Novadev94 Tap
+# novadev94 Tap
 
 ## How do I install these formulae?
 

@@ -10,7 +10,7 @@ class CardanoUp < Formula
     raise "Unsupported OS for cardano-up"
   end.freeze
 
-  VERSION = "0.16.0".freeze
+  VERSION = "0.17.0".freeze
 
   ARCH = if Hardware::CPU.arm?
     "arm64"
@@ -20,10 +20,10 @@ class CardanoUp < Formula
 
   # Per-platform checksums
   SHA_TABLE = {
-    ["darwin", "arm64"] => "3d5bbc4713f3a5206daba535635ab72d3cbba8c81697131afbd27429199fe674",
-    ["darwin", "amd64"] => "450091d7b8f775284ddf77b40b7bf2c986a34fcb2730cc8cc17353ba63bfe63c",
-    ["linux",  "arm64"] => "62adc9770f182f9c42d0f0a77334797d407e2812ffb8bb21bfae64ca9cc9b3dd",
-    ["linux",  "amd64"] => "fb5072c5ae9434a9c6a7c1f6e7c6124f698c63a2d768b18ce6831df94bab5e66",
+    ["darwin", "arm64"] => "18e71c538ecbe16b07c8f261dbab16c3f254c87d7de922d3163d489df42a1838",
+    ["darwin", "amd64"] => "eaedc1357f3872b65cfb4a5b8cd37f9e272be8be9b8354c7a8445458a14657d7",
+    ["linux",  "arm64"] => "bcf467854cbbf73ab688007e0b2ee8e5b9094af45c4d4c7bb9e2005b6cd0b3b9",
+    ["linux",  "amd64"] => "83be0ae4741008e9f29b01b35321a11632b693217f266f5b264c0a330c3eb634",
   }.freeze
 
   url "https://github.com/blinklabs-io/cardano-up/releases/download/v#{VERSION}/cardano-up-v#{VERSION}-#{OSN}-#{ARCH}"
